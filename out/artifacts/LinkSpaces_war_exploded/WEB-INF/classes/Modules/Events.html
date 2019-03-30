@@ -1,0 +1,201 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Events</title>
+
+
+    <link rel="stylesheet" href="mainn.css" media="all"/>
+    <script src="mainnJS.js"></script>
+
+</head>
+<body onload="document.getElementById('defaultOpen').click();">
+<h1 align="center">Browse Events</h1>
+<!--main container starts here-->
+<div class="main_wrapper">
+    <!--header ends here-->
+
+    <!--NavigationBar starts here-->
+    <div class="menubar">
+
+
+        <h1 align="center">Events</h1>
+    <div class="menubar">
+
+
+        <ul id="menu">
+            <div class="tab"><button class="tablinks" onclick="openEvent(event,'find')" id="defaultOpen"><li>Find Event</li></button>
+            <script>document.getElementById("defaultOpen").click();</script>
+            <button class="tablinks" onclick="openEvent(event,'my')"><li>My Events</li></button>
+                <button class="tablinks" onclick="openEvent(event,'add')"><li>Add Event</li></button></div>
+
+        </ul>
+
+    </div>
+        <div id="find" class="tabcontent">
+    <!--NavigationBar ends here-->
+
+    <!--conetnt wrapper start-->
+    <div class="content_wrapper">
+        <div id="sidebar">
+
+
+
+            <div id="form">
+                <form method="get" action="results.php" enctype="multipart/form-data"/>
+                <input type="text" name="user_query" placeholder="Search Events" />
+                <input type="submit" name="search" value="Search"/>
+                </form>
+            </div>
+            <hr color="white">
+
+
+
+            <ul id="Cats">
+                <b id="side">Date:</b>
+                <b id="side">2018</b>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">March-April 20</lable></li>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">April-May 20</lable></li>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">May-June 20</lable></li>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">June-July 20</lable></li>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">July-August 20</lable></li>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">August-September 20</lable></li>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">September-October 20</lable></li>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">October-November 20</lable></li>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">November-December 20</lable></li>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">December-January 20</lable></li>
+                <hr>
+                <b id="side">2019</b>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">January-February 20</lable></li>
+                <li><lable class="container"><input type="checkbox" name="date" value="month">February-March 20</lable></li>
+                <hr color="white">
+                <b id="side">Location:</b>
+                <br/>
+                <li><lable class="container"><input type="checkbox" name="venue" value="location">NSBM</lable></li>
+                <li><lable class="container"><input type="checkbox" name="venue" value="location">Microsoft Sri Lanka</lable></li>
+                <li><lable class="container"><input type="checkbox" name="venue" value="location">IBM Sri Lanka</lable></li>
+                <li><lable class="container"><input type="checkbox" name="venue" value="location">WSO2</lable></li>
+                <li><lable class="container"><input type="checkbox" name="venue" value="location">SLIIT</lable></li>
+
+
+
+            </ul>
+
+        </div>
+
+
+
+
+
+
+        <div id="content_area">
+            <h1>first content</h1>
+            <hr>
+            <h1>second content</h1>
+            <hr>
+            <h1>third content</h1>
+            <hr>
+            <h1>forth content</h1>
+            <hr>
+            <h1>fifth content</h1>
+            <hr>
+            <h1>first content</h1>
+            <hr>
+            <h1>second content</h1>
+            <hr>
+            <h1>third content</h1>
+            <hr>
+            <h1>forth content</h1>
+            <hr>
+            <h1>fifth content</h1>
+
+
+        </div>
+
+
+    </div>
+    <!--content wrapper ends here-->
+        </div>
+
+        <div id="add" class="tabcontent">
+
+            <table id="tbl" align="center">
+                <tr>
+                    <td><b>Event Title:</b></td>
+                    <td><textarea rows="1" cols="30"></textarea></td>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <td><b>Date & Time:</b></td>
+                    <td><form action="/acton.php"><input type="date" name="startDate"></form>
+                        <form action="/acton.php"><input type="time" name="startTime"></form>
+                        to
+                        <form action="/acton.php"><input type="date" name="endDate"></form>
+                        <form action="/acton.php"><input type="time" name="endTime"></form>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><lable class="cont"><input type="checkbox" name="date" value="month">This is a virtual event</lable></td>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <td><b>venue name</b></td>
+                    <td><textarea rows="1" cols="30"></textarea>
+                        <br><lable class="cont">EX. "Carriegie Hall"</lable></td>
+
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <td><b>location</b></td>
+                    <td><textarea rows="1" cols="30"></textarea>
+                        <br>
+                        <lable class="cont">EX. "184 Main rd Galle"</lable>
+                    </td>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <td><b>Website</b></td>
+                    <td>
+                        <textarea rows="1" cols="30">https://</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Are you attending?</b></td>
+                    <td>
+                        <input type="radio" name="abc" value="attend">I'm attending
+                        <input type="radio" name="abc" value="inter">I'm interested
+                        <input type="radio" name="abc" value="not">I'm not attending
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Are you Organizing?</b></td>
+                    <td><lable class="cont"><input type="checkbox" name="date" value="month">Yes, I am organizing this event</lable>
+                        <br>
+                        <br>
+                        <b>add a discription</b>
+                        <br>
+                        <br>
+                        <br>
+                        <button class="tablinks" onclick="openEvent(event,'find')" id="">Publish Event</button>
+                        <button class="tablinks" onclick="openEvent(event,'find')" id="">Preview Event</button>
+                        <button class="tablinks" onclick="openEvent(event,'find')" id="">Save Draft</button>
+                        or <a href="Events.html/add">cancel</a>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    <div id="footer">
+    </div>
+
+
+
+
+</div>
+<!--main container starts here-->
+</body>
+</html>
