@@ -10,7 +10,7 @@
     <div class="chat">
         <div class="chat-history">
             <div class="chat-message clearfix">
-                <img src="">
+                <img src="pictures/sasith.jpg">
                 <div class="chat-message-content clearfix">
                     <span class="chat-time">14.32</span>
                     <h5>Sasith Manthila</h5>
@@ -21,7 +21,7 @@
             </div>
             <hr>
             <div class="chat-message clearfix">
-                <img src="">
+                <img src="pictures/lasith.jpg">
                 <div class="chat-message-content clearfix">
                     <span class="chat-time">14.35</span>
 
@@ -33,7 +33,7 @@
             </div>
             <hr>
             <div class="chat-message clearfix">
-                <img src="">
+                <img src="pictures/sasith.jpg">
                 <div class="chat-message-content clearfix">
                     <span class="chat-time">14.38</span>
                     <h5>Sasith Manthila</h5>

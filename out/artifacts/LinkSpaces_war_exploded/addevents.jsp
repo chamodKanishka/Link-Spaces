@@ -54,7 +54,7 @@
     </tr>
     <tr>
         <td><b>Are you Organizing?</b></td>
-        <td><lable class="cont"><input type="checkbox" name="date" value="month">Yes, I am organizing this event</lable></td>
+        <td><lable class="cont"><input type="checkbox" name="date" value="month">Yes, I am organizing this event</lable>
             <br>
             <br>
             <b>add a discription</b>
