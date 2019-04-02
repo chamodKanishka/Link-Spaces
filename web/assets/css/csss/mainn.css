@@ -82,13 +82,13 @@ form{
 .content_wrapper{
     width: 1000px;
     margin: auto;
-    background-color: #ccffee;
+    background-color: snow;
 }
 
 #content_area{
     /*width: 782px;
     height: 580px;*/
-    background-color: #ccffee;
+    background-color: snow;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -210,4 +210,25 @@ form{
 
 a{
     text-decoration: none;
+}
+h1,h3{
+    color: #2b02ff;
+}
+h7{
+    color: rgba(38,109,238,0.93);
+}
+table{
+    padding-top: revert;
+}
+p{
+    color: #17a2b8;
+}
+#mycontent_area{
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: snow;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: 580px;
 }

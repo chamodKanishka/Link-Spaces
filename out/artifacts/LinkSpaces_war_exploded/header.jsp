@@ -12,9 +12,7 @@
         <h1 align="center">Events</h1>
 
         <div class="tab"><form action="events.jsp"><button class="">Find Event</button></form></div>
-        <div class="tab"><form><button class="">My Events</button></form></div>
+        <div class="tab"><form action="myevents.jsp"><button class="">My Events</button></form></div>
         <div class="tab"><form action="addevents.jsp"><button class="">Add Event</button></form></div>
-
-
     </div>
 </div>

@@ -166,3 +166,6 @@ p { margin:0; }
     font-style: italic;
     margin: 0 0 0 80px;
 }
+p{
+    block-size: content-box;
+}

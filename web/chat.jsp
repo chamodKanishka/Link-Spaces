@@ -10,7 +10,7 @@
     <div class="chat">
         <div class="chat-history">
             <div class="chat-message clearfix">
-                <img src="pictures/sasith.jpg">
+                <img src="pictures/sasith.jpg" style="width: 50px; height: 50px;">
                 <div class="chat-message-content clearfix">
                     <span class="chat-time">14.32</span>
                     <h5>Sasith Manthila</h5>
@@ -21,24 +21,24 @@
             </div>
             <hr>
             <div class="chat-message clearfix">
-                <img src="pictures/lasith.jpg">
+                <img src="pictures/lasith.jpg" style="width: 50px; height: 50px;">
                 <div class="chat-message-content clearfix">
                     <span class="chat-time">14.35</span>
-
                     <h5>Lasitha Wijayakulathilaka</h5>
-                    <p>jenjnsejnsgmkesmmmtoeteksmldc, dcs,,
-                        flkemkrmriomriamlwam mf fvl
+                    <p>jenjnsejnsgmkesmmmt
+                        oeteksmldc,dcs,,
+                        flkemkrmriomriamlwammffvl
                     </p>
                 </div>
             </div>
             <hr>
             <div class="chat-message clearfix">
-                <img src="pictures/sasith.jpg">
+                <img src="pictures/sasith.jpg" style="width: 50px; height: 50px;">
                 <div class="chat-message-content clearfix">
                     <span class="chat-time">14.38</span>
                     <h5>Sasith Manthila</h5>
                     <p>gmdjsgjndsongjdsngon
-                        dgojsndgondsjgsdgmdkgnsdkvkjdsne
+                        dgojsndgondsjgsdgmd
                     </p>
                 </div>
             </div>
