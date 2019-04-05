@@ -8,9 +8,11 @@ import java.sql.*;
 
 public class StudentController {
 
+    String conn = "jdbc:mysql://localhost:3306/linkspaces";
+    Dbcon db = new Dbcon();
 
     public void insert(HttpServletRequest request){
-        String conn = "jdbc:mysql://localhost:3306/linkspaces";
+
         String uname = request.getParameter("uname");
         String pwd = request.getParameter("pwd");
         String type = request.getParameter("type");
@@ -21,7 +23,6 @@ public class StudentController {
         String uni = request.getParameter("university");
         String index = request.getParameter("index");
         UserController user = new UserController();
-        Dbcon db = new Dbcon();
 
         int id = -1;
 

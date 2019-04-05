@@ -9,36 +9,37 @@
 <html>
 <head>
     <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="scripts/validate.js"></script>
     <title>Register</title>
 </head>
 <body>
     <div id="container">
     <div id="contentbox">
     <p class="contenthead">Register as an Industrial Entity</p>
-    <form id="regform" action="RegisterController" method="POST">
+    <form id="regform" action="RegisterController" method="POST" onsubmit="return validate()">
         
         <hr/>
         <p class="inputlabel">Organization:</p>
-        <input class="inputfield" type="text" name="org"/>
+        <input class="inputfield" type="text" name="org" required/>
         
         <p class="inputlabel">Organization Type:</p>
-        <input class="inputfield" type="text" name="orgtype"/>
+        <input class="inputfield" type="text" name="orgtype" required/>
         
         <p class="inputlabel">Website URL:</p>
-        <input class="inputfield" type="text" name="weburl"/>
+        <input class="inputfield" type="text" name="weburl" required/>
         
         <p class="inputlabel">E-mail:</p>
-        <input class="inputfield" type="text" name="email"/>
+        <input class="inputfield" type="email" name="email" required/>
         
         <hr/>
         <p class="inputlabel">Username:</p>
-        <input class="inputfield" type="text" name="uname"/>
+        <input class="inputfield" type="text" name="uname" required/>
         
         <p class="inputlabel">Password:</p>
-        <input class="inputfield" type="password" name="pwd"/>
+        <input class="inputfield" type="password" name="pwd" id="pwd" required/>
         
         <p class="inputlabel">Repeat Password:</p>
-        <input class="inputfield" type="password" name="rptpwd"/>
+        <input class="inputfield" type="password" name="rptpwd" id="rptpwd" required/>
         
         <input class="inputfield" type="hidden" name="type" value="industrial"/>
         <hr/>

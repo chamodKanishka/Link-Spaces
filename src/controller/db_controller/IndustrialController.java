@@ -7,9 +7,11 @@ import java.sql.*;
 
 public class IndustrialController {
 
+    String conn = "jdbc:mysql://localhost:3306/linkspaces";
+    Dbcon db = new Dbcon();
 
     public void insert(HttpServletRequest request) {
-        String conn = "jdbc:mysql://localhost:3306/linkspaces";
+
         String uname = request.getParameter("uname");
         String pwd = request.getParameter("pwd");
         String type = request.getParameter("type");
