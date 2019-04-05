@@ -17,9 +17,12 @@
         <div class="inner">
             <div class="content">
                 <h1>LinkSpaces</h1>
-                <a class="btn1" href="#">Log In</a>
-                <a class="btn2" href="#">Register</a>
-                <a class="btn3" href="#">Visitor</a>
+                <div class="btns">
+                    <a class="btn1" href="#">Log In</a>
+                    <a class="btn2" href="#">Register</a>
+                    <a class="btn3" href="#">Visitor</a>
+                </div>
+
 
              </div>
         </div>

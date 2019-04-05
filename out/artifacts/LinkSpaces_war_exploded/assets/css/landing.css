@@ -21,7 +21,7 @@ html, body{
 
 .inner{
     disply: table-cell;
-    verticle-align: middle;
+    verticle-align: center;
     max-width: none;
 }
 
@@ -40,6 +40,7 @@ h1{
 
 .btn1{
     border-radius: 9px;
+    top: 50%;
     font-family: 'Oswald', san-serif;
     colour: #000000;
     font-size: 135%;
@@ -49,6 +50,40 @@ h1{
     text-decoration: none;
 }
 .btn1hover {
+    color: #4d4d4d;
+    border: solid #4d4d4d 3px;
+
+}
+
+.btn2{
+    border-radius: 9px;
+    top: 50%;
+    font-family: 'Oswald', san-serif;
+    colour: #000000;
+    font-size: 135%;
+    padding: 10px 20px;
+    border: solid #000000 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.btn2hover {
+    color: #4d4d4d;
+    border: solid #4d4d4d 3px;
+
+}
+
+.btn3{
+    border-radius: 9px;
+    top: 50%;
+    font-family: 'Oswald', san-serif;
+    colour: #000000;
+    font-size: 135%;
+    padding: 10px 20px;
+    border: solid #000000 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.btn3hover {
     color: #4d4d4d;
     border: solid #4d4d4d 3px;
 
