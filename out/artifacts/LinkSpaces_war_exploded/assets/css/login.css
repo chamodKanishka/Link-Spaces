@@ -66,3 +66,6 @@ p{
     opacity: 0.5;
     font-size: 12px;
 }
+a{
+    text-decoration: none;
+}

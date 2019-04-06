@@ -27,11 +27,11 @@ html, body{
 
 .content{
     max-width: 500px;
-    margin: 0 auto;
     text-align: center;
 }
 
 h1{
+    margin-top: 100px;
     font-family: 'Raleway', sans-serif;
     color: #000000;
     text-shadeow: 0px 0px 300px #4d4d4d;
@@ -50,6 +50,7 @@ h1{
     text-decoration: none;
 }
 .btn1hover {
+    opacity: 0.5;
     color: #4d4d4d;
     border: solid #4d4d4d 3px;
 
@@ -67,6 +68,7 @@ h1{
     text-decoration: none;
 }
 .btn2hover {
+    opacity: 0.5;
     color: #4d4d4d;
     border: solid #4d4d4d 3px;
 
@@ -84,7 +86,11 @@ h1{
     text-decoration: none;
 }
 .btn3hover {
+    opacity: 0.5;
     color: #4d4d4d;
     border: solid #4d4d4d 3px;
 
+}
+.btns{
+    align-content: center;
 }

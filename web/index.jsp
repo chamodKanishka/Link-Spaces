@@ -16,18 +16,36 @@
     <div class="intro">
         <div class="inner">
             <div class="content">
-                <h1>LinkSpaces</h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1 align="center">LinkSpaces</h1>
+                <br>
+                <br>
+                <br>
+                <br>
                 <div class="btns">
-                    <a class="btn1" href="#">Log In</a>
-                    <a class="btn2" href="#">Register</a>
-                    <a class="btn3" href="#">Visitor</a>
+                    <form class="box" action="login.jsp" method="post">
+                        <button type="submit" class="btn1" href="#">Log In</button>
+                        <button type="submit" class="btn2" href="#">Register</button>
+                        <button type="submit" class="btn3" href="#">Visitor</button>
+                    </form>
                 </div>
-
-
-             </div>
+            </div>
         </div>
 
+
     </div>
+
 
 
   </body>
