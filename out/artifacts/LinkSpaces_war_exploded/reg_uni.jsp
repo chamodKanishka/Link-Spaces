@@ -16,24 +16,24 @@
     <div id="container">
     <div id="contentbox">
     <p class="contenthead">Register as a University</p>
-    <form id="regform" action="RegisterController" method="POST" onsubmit="return validate()">
+    <form id="regform" action="RegisterController" method="POST" onsubmit="return validateUniversity()">
         
         <hr/>
-        <p class="inputlabel">University:</p>
-        <input class="inputfield" type="text" name="uni" required/>
+        <p class="inputlabel">University Name:</p>
+        <input class="inputfield" type="text" name="uni" id="uni" required/>
         
         <p class="inputlabel">University Registration Number:</p>
-        <input class="inputfield" type="text" name="regno" required/>
+        <input class="inputfield" type="text" name="regno" id="regno" required/>
         
         <p class="inputlabel">Website URL:</p>
-        <input class="inputfield" type="text" name="weburl" required/>
+        <input class="inputfield" type="text" name="weburl" id="weburl" required/>
         
         <p class="inputlabel">E-mail:</p>
-        <input class="inputfield" type="email" name="email" required/>
+        <input class="inputfield" type="email" name="email" id="email" required/>
         
         <hr/>
         <p class="inputlabel">Username:</p>
-        <input class="inputfield" type="text" name="uname" required/>
+        <input class="inputfield" type="text" name="uname"  id="uname" required/>
         
         <p class="inputlabel">Password:</p>
         <input class="inputfield" type="password" name="pwd" id="pwd" required/>

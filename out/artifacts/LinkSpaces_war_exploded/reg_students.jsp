@@ -1,5 +1,4 @@
 <%@ page import="controller.db_controller.UniversityController" %>
-<%@ page import="java.util.HashMap" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %><%--
@@ -32,19 +31,19 @@
         
         <hr/>
         <p class="inputlabel">First Name:</p>
-        <input class="inputfield" type="text" name="fname" required/>
+        <input class="inputfield" type="text" name="fname" id="fname" required/>
         
         <p class="inputlabel">Last Name:</p>
-        <input class="inputfield" type="text" name="lname" required/>
+        <input class="inputfield" type="text" name="lname" id="lname" required/>
         
         <p class="inputlabel">Date of birth:</p>
-        <input class="inputfield" type="date" name="dob" required/>
+        <input class="inputfield" type="date" name="dob" id="dob" required/>
         
         <p class="inputlabel">E-mail:</p>
-        <input class="inputfield" type="email" name="email" required/>
+        <input class="inputfield" type="email" name="email" id="email" required/>
         
         <p class="inputlabel">University:</p>
-        <select name="university" class="inputselect">
+        <select name="university" id="university" class="inputselect">
             <option value="none">Select a University</option>
             <%
                 for(String uniName: uniList){
@@ -57,11 +56,11 @@
         <%--<input class="inputfield" type="text" name="university" required/>--%>
         
         <p class="inputlabel">Index Number:</p>
-        <input class="inputfield" type="text" name="index" required/>
+        <input class="inputfield" type="text" name="index"  id="index" required/>
         
         <hr/>
         <p class="inputlabel">Username:</p>
-        <input class="inputfield" type="text" name="uname" required/>
+        <input class="inputfield" type="text" name="uname" id="uname" required/>
         
         <p class="inputlabel">Password:</p>
         <input class="inputfield" type="password" name="pwd" id="pwd" required/>

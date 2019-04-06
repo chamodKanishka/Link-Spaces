@@ -16,24 +16,24 @@
     <div id="container">
     <div id="contentbox">
     <p class="contenthead">Register as an Industrial Entity</p>
-    <form id="regform" action="RegisterController" method="POST" onsubmit="return validate()">
+    <form id="regform" action="RegisterController" method="POST" onsubmit="return validateIndustrial()">
         
         <hr/>
-        <p class="inputlabel">Organization:</p>
-        <input class="inputfield" type="text" name="org" required/>
+        <p class="inputlabel">Organization Name:</p>
+        <input class="inputfield" type="text" name="org" id="org" required/>
         
         <p class="inputlabel">Organization Type:</p>
-        <input class="inputfield" type="text" name="orgtype" required/>
+        <input class="inputfield" type="text" name="orgtype" id="orgtype" required/>
         
         <p class="inputlabel">Website URL:</p>
-        <input class="inputfield" type="text" name="weburl" required/>
+        <input class="inputfield" type="text" name="weburl" id="weburl" required/>
         
         <p class="inputlabel">E-mail:</p>
-        <input class="inputfield" type="email" name="email" required/>
+        <input class="inputfield" type="email" name="email" id="email" required/>
         
         <hr/>
         <p class="inputlabel">Username:</p>
-        <input class="inputfield" type="text" name="uname" required/>
+        <input class="inputfield" type="text" name="uname" id="uname" required/>
         
         <p class="inputlabel">Password:</p>
         <input class="inputfield" type="password" name="pwd" id="pwd" required/>

@@ -12,7 +12,6 @@ import java.io.IOException;
 import controller.db_controller.IndustrialController;
 import controller.db_controller.StudentController;
 import controller.db_controller.UniversityController;
-import db.Dbcon;
 
 @WebServlet(name = "RegisterController" , value="/RegisterController")
 public class RegisterController extends HttpServlet {
