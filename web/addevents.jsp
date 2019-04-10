@@ -1,11 +1,11 @@
 <jsp:include page="header.jsp"/>
-<form action="addevent" method="POST">
+<form action="event_image" method="post" enctype="multipart/form-data">
     <h1 align="center">Add Your Event</h1>
     <table cellpadding="10px" id="tbl" align="center">
         <tr>
             <td><b>Event Title:</b></td>
             <td>
-                <textarea rows="1" cols="30" input type="text" name="event"></textarea>
+                <textarea rows="1" cols="30" input type="text" id="event" name="event"></textarea>
                 <!--<textarea rows="1" cols="30"></textarea>-->
             </td>
         </tr>
@@ -70,14 +70,12 @@
         </tr>
         <tr>
             <td><b>Add discription</b></td>
-            <td><textarea rows="10" cols="30" input type="text" name="discription"></textarea></td>
+            <td><textarea rows="10" cols="30" input type="text" id="discription" name="discription"></textarea></td>
         </tr>
         <tr>
             <td><b>Add image</b></td>
             <td>
-                <div id="fileToUpload">
                 <input type="file" name="file">
-                </div>
             </td>
         </tr>
 
@@ -88,20 +86,53 @@
         <tr>
             <td></td>
             <td>
-                <button><input type="submit" value="Publish Event" id="publish_event"></button>
+                <button type="submit" id="publish_event">Publish Event</button>
                 to
                     <button id="asd" type="button">cancel</button>
             </td>
         </tr>
     </table>
 </form>
-<form action="event_image" id="event_images" method="post" enctype="multipart/form-data"></form>
+<%--<form action="event_image" id="event_images" method="post" enctype="multipart/form-data"></form>--%>
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script>
-    $('#publish_event').click(function () {
-        $('#event_images').append($('#fileToUpload').html());
-        $('#event_images').unbind("submit")
-        $('#event_images').submit();
-        console.log($('#event_images').html())
-    })
+    // $('#publish_event').click(function () {
+    //     $('#event_images').append($('#fileToUpload').html());
+    //     $('#event_images').unbind("submit")
+    //     $('#event_images').submit();
+    //     console.log($('#event_images').html())
+    // })
+    // $('#publish_event').click(function () {
+    //     // console.log($('#event').val())
+    //     var formData = new FormData();
+    //     // formData.append('discription', $('#discription').val());
+    //     // formData.append('event', $('#event').val());
+    //     // Attach file
+    //     formData.append('image', $('input[type=file]')[0].files[0]);
+    //
+    //     $.ajax({
+    //         url: window.location.origin + "/event_image",
+    //         data: formData,
+    //         type: 'POST',
+    //         enctype:'multipart/form-data',
+    //         // contentType: false // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+    //         processData: false // NEEDED, DON'T OMIT THIS
+    //         // ... Other options like success and etc
+    //     });
+    //     $("#formData").unbind("submit");
+    //     $('#formData').submit();
+    //     // $.ajax(
+    //     //     {
+    //     //         type: "post",
+    //     //         url: window.location.origin + "/addevent",
+    //     //         data: formData,
+    //     //         success: function (response) {
+    //     //
+    //     //         },
+    //     //         error: function () {
+    //     //
+    //     //         }
+    //     //     }
+    //     // );
+    // })
 </script>
