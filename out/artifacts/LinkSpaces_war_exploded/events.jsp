@@ -7,6 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="header.jsp"/>
+<script src="controllers/hello.js"></script>
+<link rel="stylesheet" href="assets/css/csss/hello.css"/>
 <div class="row">
     <div class="col-3" style="padding-right: 0px">
         <div id="sidebar">
@@ -67,11 +69,40 @@
             <hr>
             <h1>forth content</h1>
             <hr>
-            <h3 align="center"><%= request.getParameter("event")%></h3>
-            <h7>Venue:<%= request.getParameter("venue")%></h7>
+            <%
+                if(request.getParameter("event")!=null){
+                    %>
+                        <h3 align="center"><%=request.getParameter("event")%></h3>
+                    <%
+                }
+            %>
+            <%
+                if(request.getParameter("venue")!=null){
+                    %>
+                        <h7>Venue:<%= request.getParameter("venue")%></h7>
+                    <%
+                }
+            %>
+            <%
+                if(request.getParameter("venue")!=null){
+            %>
             <h7>Location:<%= request.getParameter("location")%></h7>
+            <%
+                }
+            %>
+            <%
+                if(request.getParameter("venue")!=null){
+            %>
             <h7>Website:<%= request.getParameter("website")%></h7>
+            <%
+                }
+            %><%
+            if(request.getParameter("venue")!=null){
+        %>
             <h7>This is a virtual event:<%= request.getParameter("virtual")%></h7>
+            <%
+                }
+            %>
                 <%
                     if(request.getParameter("abc") != null) {
                         if(request.getParameter("abc").equals("attend")) {
@@ -89,25 +120,90 @@
             <table>
                 <tr>
                     <td>
+                        <%
+                            if(request.getParameter("venue")!=null){
+                        %>
                         <h7>Start Date:<%= request.getParameter("startDate")%></h7>
+                        <%
+                            }
+                        %>
                     </td>
                     <td>
+                        <%
+                            if(request.getParameter("venue")!=null){
+                        %>
                         <h7>Start Time:<%= request.getParameter("startTime")%></h7>
+                        <%
+                            }
+                        %>
+
 
                     </td>
                 </tr>
                 <tr>
                     <td>
+                        <%
+                            if(request.getParameter("venue")!=null){
+                        %>
                         <h7>End Time:<%= request.getParameter("endTime")%></h7>
+                        <%
+                            }
+                        %>
+
                     </td>
                     <td>
+                        <%
+                            if(request.getParameter("venue")!=null){
+                        %>
                         <h7>End Date:<%= request.getParameter("endDate")%></h7>
+                        <%
+                            }
+                        %>
+
                     </td>
                 </tr>
             </table>
 
-
+            <%
+                if(request.getParameter("venue")!=null){
+            %>
             <p align="center"><%=request.getParameter("discription")%></p>
+            <%
+                }
+            %>
+            <%
+                if(request.getParameter("venue")!=null){
+            %>
+            <hr>
+            <%
+                }
+            %>
+            <table>
+                <tr><br>
+                    <br>
+
+                    <td>
+                           <a class="button" href="#popup1">Comment</a>
+                        </td>
+                        <td><a class="button" href="comments.jsp">View Comments</a></td>
+                    <td><a class="button" href="comments.jsp">Edit Event</a></td>
+                </tr>
+            </table>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Type Your Comment Here</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <form id="comment"><textarea  rows="5" cols="40"></textarea>
+                            <br><br><a class="button" href="#">Post</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Trigger/Open The Modal -->
             <!--<h3 align="center"><%= request.getParameter("event")%></h3>
             <h3 align="center"><%= request.getParameter("event")%></h3>-->
 

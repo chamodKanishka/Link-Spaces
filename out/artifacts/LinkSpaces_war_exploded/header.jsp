@@ -4,6 +4,7 @@
     <title>Events</title>
     <link rel="stylesheet" href="assets/css/csss/mainn.css" media="all"/>
     <link rel="stylesheet" href="assets/css/csss/main.css"/>
+    <link rel="stylesheet" href="assets/css/csss/hello.css"/>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
 </head>
 <body class="container-fluid">
