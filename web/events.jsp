@@ -9,13 +9,16 @@
 <jsp:include page="header.jsp"/>
 <script src="controllers/hello.js"></script>
 <link rel="stylesheet" href="assets/css/csss/hello.css"/>
+<link rel="stylesheet" href="assets/css/csss/mainnn.css">
 <div class="row">
     <div class="col-3" style="padding-right: 0px">
+
+        <br>
         <div id="sidebar">
-
-
-
             <div id="form">
+                <div id="wrapperdown">
+                    <button class="search icon-down"><span>Search Panel</span></button>
+                </div>
                 <form method="get" action="results.php" enctype="multipart/form-data"/>
                 <input type="text" name="user_query" placeholder="Search Events" />
                 <button><input type="button" name="search" value="Search"/></button>
@@ -214,7 +217,7 @@
 <div id="footer">
 </div>
 <div id="chat">
-<jsp:include page="chat.jsp"/>
+<!--<jsp:include page="chat.jsp"/>-->
 </div>
 <script src="controllers/chatController.js"></script>
 
