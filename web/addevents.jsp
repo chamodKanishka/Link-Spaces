@@ -1,4 +1,5 @@
 <jsp:include page="header.jsp"/>
+<link rel="stylesheet" href="assets/css/csss/mainnnnn.css">
 <form action="event_image" method="post" enctype="multipart/form-data">
     <h1 align="center">Add Your Event</h1>
     <table cellpadding="10px" id="tbl" align="center">

@@ -10,6 +10,7 @@
 <script src="controllers/hello.js"></script>
 <link rel="stylesheet" href="assets/css/csss/hello.css"/>
 <link rel="stylesheet" href="assets/css/csss/mainnn.css">
+<link rel="stylesheet" href="assets/css/csss/mainnnnn.css">
 <div class="row">
     <div class="col-3" style="padding-right: 0px">
 
@@ -28,32 +29,32 @@
 
 
 
-            <ul id="Cats" type="none">
+            <ul id="Cats" class="container" type="none">
                 <b id="side">Date:</b>
                 <b id="side">2019</b>
-
-                <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month1">March-April 20</lable></li>
-                <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month2">April-May 20</lable></li>
-                <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month3">May-June 20</lable></li>
-                <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month">June-July 20</lable></li>
-                <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month">July-August 20</lable></li>
-                <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month">August-September 20</lable></li>
-                <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month">September-October 20</lable></li>
-                <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month">October-November 20</lable></li>
-                <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month">November-December 20</lable></li>
-                <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month">December-January 20</lable></li>
+                <li><input class="date_radio" type="radio" id="a-option" name="date"><label for="a-option">Feb-March 20</label><div class="check"></div></li>
+                <li><input class="date_radio" type="radio" id="b-option" name="date"><label for="b-option">March-April 20</label><div class="check"></div></li>
+                <li><input class="date_radio" type="radio" id="c-option" name="date"><label for="c-option">April-May 20</label><div class="check"></div></li>
+                <li><input class="date_radio" type="radio" id="d-option" name="date"><label for="d-option">May-June 20</label><div class="check"></div></li>
+                <li><input class="date_radio" type="radio" id="e-option" name="date"><label for="e-option">June-July 20</label><div class="check"></div></li>
+                <li><input class="date_radio" type="radio" id="f-option" name="date"><label for="f-option">July-August 20</label><div class="check"></div></li>
+                <li><input class="date_radio" type="radio" id="g-option" name="date"><label for="g-option">August-September 20</label><div class="check"></div></li>
+                <li><input class="date_radio" type="radio" id="h-option" name="date"><label for="h-option">September-October 20</label><div class="check"></div></li>
+                <li><input class="date_radio" type="radio" id="i-option" name="date"><label for="i-option">October-November 20</label><div class="check"></div></li>
+                <li><input class="date_radio" type="radio" id="j-option" name="date"><label for="j-option">November-December 20</label><div class="check"></div></li>
+                <li><input class="date_radio" type="radio" id="k-option" name="date"><label for="k-option">December-January 20</label><div class="check"></div></li>
                 <hr>
                 <b id="side">2020</b>
-                <li><lable class="container"><input type="radio" name="date" value="month">January-February 20</lable></li>
-                <li><lable class="container"><input type="radio" name="date" value="month">February-March 20</lable></li>
+                <li><input class="date_radio" type="radio" id="l-option" name="date"><label for="l-option">January-February 20</label><div class="check"></div></li>
+                <li><input class="date_radio" type="radio" id="m-option" name="date"><label for="m-option">February-March 20</label><div class="check"></div></li>
                 <hr color="white">
                 <b id="side">Location:</b>
                 <br/>
-                <li><lable class="container"><input type="radio" name="venue" value="location">NSBM</lable></li>
-                <li><lable class="container"><input type="radio" name="venue" value="location">Microsoft Sri Lanka</lable></li>
-                <li><lable class="container"><input type="radio" name="venue" value="location">IBM Sri Lanka</lable></li>
-                <li><lable class="container"><input type="radio" name="venue" value="location">WSO2</lable></li>
-                <li><lable class="container"><input type="radio" name="venue" value="location">SLIIT</lable></li>
+                <li><input class="Location_radio" type="radio" id="n-option" name="venue"><label for="n-option">NSBM</label><div class="check"></div></li>
+                <li><input class="Location_radio" type="radio" id="o-option" name="venue"><label for="o-option">Microsoft Sri Lanka</label><div class="check"></div></li>
+                <li><input class="Location_radio" type="radio" id="p-option" name="venue"><label for="p-option">IBM Sri Lanka</label><div class="check"></div></li>
+                <li><input class="Location_radio" type="radio" id="q-option" name="venue"><label for="q-option">WSO2</label><div class="check"></div></li>
+                <li><input class="Location_radio" type="radio" id="r-option" name="venue"><label for="r-option">SLIIT</label><div class="check"></div></li>
                 <form><button>Add a new location</button></form>
 
 
