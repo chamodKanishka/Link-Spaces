@@ -20,8 +20,8 @@
                     <button class="search icon-down"><span>Search Panel</span></button>
                 </div>
                 <form method="get" action="results.php" enctype="multipart/form-data"/>
-                <input type="text" name="user_query" placeholder="Search Events" />
-                <button><input type="button" name="search" value="Search"/></button>
+                <input id="txt" type="text" name="user_query" placeholder="Search Events" />
+                <div class="container blue circleBehind"><a id="searchb">Search</a></div>
                 </form>
             </div>
             <hr color="white">
@@ -31,6 +31,7 @@
             <ul id="Cats" type="none">
                 <b id="side">Date:</b>
                 <b id="side">2019</b>
+
                 <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month1">March-April 20</lable></li>
                 <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month2">April-May 20</lable></li>
                 <li><lable class="container"><input class="date_radio" type="radio" name="date" value="month3">May-June 20</lable></li>
