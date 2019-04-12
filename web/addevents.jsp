@@ -9,7 +9,7 @@
             <td></td>
             <td>
                 <label> Event Name: </label> <br>
-                <input type="text" placeholder="" />
+                <input type="text" placeholder="Event Name" />
                 <!--<textarea rows="1" cols="30"></textarea>-->
             </td>
         </tr>
@@ -99,7 +99,7 @@
             <td></td>
             <td>
                 <button type="submit" id="publish_event">Publish Event</button>
-                to
+                or
                     <button id="asd" type="button">cancel</button>
             </td>
         </tr>
