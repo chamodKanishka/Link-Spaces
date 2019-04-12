@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="assets/css/csss/main.css"/>
     <link rel="stylesheet" href="assets/css/csss/hello.css"/>
     <link rel="stylesheet" href="assets/css/csss/mainnnn.css"/>
-    <link rel="stylesheet" href="assets/css/csss/hideshow.css">
+    <link rel="stylesheet" href="assets/css/csss/hideshow.css"/>
+    <link rel="stylesheet" href="assets/css/csss/navButton.css">
+
 
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/jss/Search.js"></script>

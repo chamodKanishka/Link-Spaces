@@ -1,23 +1,27 @@
 <jsp:include page="header.jsp"/>
-<link rel="stylesheet" href="assets/css/csss/mainnnnn.css">
+<link rel="stylesheet" href="assets/css/csss/form.css">
+<link rel="stylesheet" href="assets/css/csss/radioChanger.css">
+<div id="form">
 <form action="event_image" method="post" enctype="multipart/form-data">
     <h1 align="center">Add Your Event</h1>
     <table cellpadding="10px" id="tbl" align="center">
         <tr>
-            <td><b>Event Title:</b></td>
+            <td></td>
             <td>
-                <textarea rows="1" cols="30" input type="text" id="event" name="event"></textarea>
+                <label> Event Name: </label> <br>
+                <input type="text" placeholder="" />
                 <!--<textarea rows="1" cols="30"></textarea>-->
             </td>
         </tr>
 
         <tr>
-            <td><b>Date & Time:</b></td>
-            <td><input type="date" name="startDate">
-                <input type="time" name="startTime">
+            <td></td>
+            <td>
+                <input class="datetime" type="date" name="startDate">
+                <input class="datetime" type="time" name="startTime">
                 to
-                <input type="date" name="endDate">
-                <input type="time" name="endTime">
+                <input class="datetime" type="date" name="endDate">
+                <input class="datetime" type="time" name="endTime">
             </td>
             <td></td>
         </tr>
@@ -31,35 +35,39 @@
             </td>
         </tr>
         <tr>
-            <td><b>venue name</b></td>
-            <td><textarea rows="1" cols="30" input type="text" name="venue"></textarea>
+            <td></td>
+            <td><label> Venue Name: </label> <br>
+                <input type="text" placeholder="EX.Carriegie Hall" />
                 <br>
-                <lable class="cont">EX. "Carriegie Hall"</lable>
+                <lable class="cont">"</lable>
             </td>
         </tr>
         <br>
         <br>
         <tr>
-            <td><b>location</b></td>
-            <td><textarea rows="1" cols="30" input type="text" name="location"></textarea>
+            <td></td>
+            <td><label>Location:</label> <br>
+                <input type="text" placeholder="EX.184 Main rd Galle" />
                 <br>
-                <lable class="cont">EX. "184 Main rd Galle"</lable>
+                <lable class="cont"></lable>
             </td>
         </tr>
         <br>
         <br>
         <tr>
-            <td><b>Website</b></td>
+            <td></td>
             <td>
-                <textarea rows="1" cols="30" input type="text" name="website">https://</textarea>
+                <label> Website: </label> <br>
+                <input type="text" placeholder="https://" />
             </td>
         </tr>
         <tr>
-            <td><b>Are you attending?</b></td>
-            <td>
-                <input type="radio" name="abc" value="attend">I'm attending
-                <input type="radio" name="abc" value="inter">I'm interested
-                <input type="radio" name="abc" value="not">I'm not attending
+            <td></td>
+            <td><label>Are you attending:</label>
+                <br>
+                <input type="radio" id="f-option" name="abc" value="attend"><label class="rad" for="f-option">I'm attending</label>
+                <input type="radio" id="i-option" name="abc" value="inter"><label class="rad" for="i-option">I'm interested</label>
+                <input type="radio" id="j-option" name="abc" value="not"><label class="rad" for="j-option">I'm not attending</label>
             </td>
         </tr>
         <tr>
@@ -70,8 +78,11 @@
             </td>
         </tr>
         <tr>
-            <td><b>Add discription</b></td>
-            <td><textarea rows="10" cols="30" input type="text" id="discription" name="discription"></textarea></td>
+            <td></td>
+            <td><label>Discription:</label>
+                <br>
+                <textarea rows="10" cols="30" input type="text" id="discription" name="discription"></textarea>
+                </td>
         </tr>
         <tr>
             <td><b>Add image</b></td>
@@ -94,6 +105,7 @@
         </tr>
     </table>
 </form>
+</div>
 <%--<form action="event_image" id="event_images" method="post" enctype="multipart/form-data"></form>--%>
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script>

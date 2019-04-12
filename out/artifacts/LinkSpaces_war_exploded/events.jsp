@@ -121,11 +121,6 @@
                     <%
                 }
             %>
-            <div class="ex3">
-                <label for="item-3">View Event</label>
-                <input type="checkbox" name="two" id="" checked="false">
-                <div class="hide4">
-                    <div class="inner4">
             <%
                 if(request.getParameter("venue")!=null){
                     %>
@@ -247,9 +242,6 @@
                         <form id="comment"><textarea  rows="5" cols="40"></textarea>
                             <br><br><a class="button" href="#">Post</a>
                         </form>
-                    </div>
-                </div>
-            </div>
                     </div>
                 </div>
             </div>
