@@ -1,0 +1,63 @@
+/*label {
+    display: block;
+    margin: 20px 0 0;
+    border-bottom: 1px solid green;
+}*/
+label:hover {
+    text-decoration: underline;
+}
+input {
+    position: absolute;
+    left: -999em;
+}
+/*.hide {
+    width: 50%;
+    border: 1px solid #000;
+    background: red;
+    max-height: 99em;
+    opacity: 1;
+    height: auto;
+    overflow: hidden;
+    transition: opacity 1.5s linear, max-height 1.5s linear;
+}*/
+/*.hide p {
+    padding: 10px;
+    margin: 0;
+}*/
+/*.ex1 input[type="checkbox"]:checked + div {
+    opacity: 0;
+    max-height: 0;
+    border: none;
+}*/
+/*.follow {
+    border-top: 1px solid blue;
+    margin: 0;
+}*/
+
+/* example 2 */
+.inner {
+    position: relative;
+    overflow: hidden;
+}
+
+/* example 3 */
+#sidebar .hide3 {
+    /*width: 50%;*/
+    /*display: table;*/
+    /*height: 150px;*/
+    overflow: hidden;
+    /*background: red;*/
+    transition: all 0.5s ease;
+    /*border-left: 1px solid #000;*/
+    /*border-right: 1px solid #000;*/
+}
+/*.inner3 {
+    padding: 10px;
+}*/
+#sidebar input[type="checkbox"]:checked + .hide3 {
+    height: 0;
+    opacity: 0;
+    display: block;
+}
+#dropsearch{
+}

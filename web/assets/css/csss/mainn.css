@@ -63,23 +63,25 @@ body{background: rgba(200, 240, 255, 0.14);}
     font-family: COMIC SANS MS;
 }
 #menu a:hover { color: #668cff; font-weight: bolder;}
-form{
-    /*padding-right: 8px;*/
+/*form{
+    padding-right: 8px;
     padding-top: 15px;
-}
+}*/
 .content_wrapper{
     width: 1000px;
     margin: auto;
     background-color: snow;
 }
 #content_area{
-    /*width: 782px;
-    height: 580px;*/
+    /*width: 782px;*/
+    height: 750px;
     background-color: snow;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    height: 580px;
+}
+.col-9{
+    height: 1150px;
 }
 #sidebar{
     /*widows: 200px;*/

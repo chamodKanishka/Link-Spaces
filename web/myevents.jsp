@@ -1,5 +1,19 @@
 <jsp:include page="header.jsp"/>
+<link rel="stylesheet" href="assets/css/csss/mainnnnnn.css">
     <div id="mycontent_area" align="center">
+        <div class="ex3">
+            <label for="item-3">Toggle Div</label>
+            <input type="checkbox" name="one" id="item-3">
+            <div class="hide3">
+                <div class="inner3">
+                    <p>Equation billions upon billions! Courage of our questions decipherment, take root and flourish, cosmic ocean paroxysm of global death. Light years inconspicuous motes of rock and gas from which we spring something incredible is waiting to be known,
+                        muse about!</p>
+                    <p>Equation billions upon billions! Courage of our questions decipherment, take root and flourish, cosmic ocean paroxysm of global death. Light years inconspicuous motes of rock and gas from which we spring something incredible is waiting to be known,
+                        muse about!</p>
+                    <p>Equation billions upon billions! Courage of our questions decipherment, take root and flourish, cosmic ocean paroxysm of global death. Light years inconspicuous motes of rock and gas from which we spring something incredible is waiting to be known,
+                        muse about!</p>
+                </div>
+            </div>
         <h1>first content</h1>
         <hr>
         <h1>second content</h1>

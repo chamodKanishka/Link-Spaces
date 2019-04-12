@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/css/csss/main.css"/>
     <link rel="stylesheet" href="assets/css/csss/hello.css"/>
     <link rel="stylesheet" href="assets/css/csss/mainnnn.css"/>
+    <link rel="stylesheet" href="assets/css/csss/hideshow.css">
 
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/jss/Search.js"></script>
@@ -18,4 +19,8 @@
         <a href="myevents.jsp"><button>My Events</button></a>
         <a href="addevents.jsp"><button>Add Event</button></a>
     </div>
+
+
 </div>
+</body>
+</html>

@@ -11,17 +11,24 @@
 <link rel="stylesheet" href="assets/css/csss/hello.css"/>
 <link rel="stylesheet" href="assets/css/csss/mainnn.css">
 <link rel="stylesheet" href="assets/css/csss/mainnnnn.css">
+<link rel="stylesheet" href="assets/css/csss/mainnnnnn.css">
+<link rel="stylesheet" href="assets/css/csss/hideshow.css">
 <div class="row">
     <div class="col-3" style="padding-right: 0px">
 
         <br>
-        <div id="sidebar">
+        <input type="checkbox" name="toggle" id="toggle" />
+        <label for="toggle"></label>
+        <div class="container">
+        </div>
+        <div class="message">
+          <div id="sidebar">
             <div id="form">
                 <div id="wrapperdown">
                     <button class="search icon-down"><span>Search Panel</span></button>
                 </div>
-                <form method="get" action="results.php" enctype="multipart/form-data"/>
-                <input id="txt" type="text" name="user_query" placeholder="Search Events" />
+                <form action="/result.jsp"><textfield><input type="text" name="keyword"/></textfield>
+                <br>
                 <div class="container blue circleBehind"><a id="searchb">Search</a></div>
                 </form>
             </div>
@@ -55,17 +62,39 @@
                 <li><input class="Location_radio" type="radio" id="p-option" name="venue"><label for="p-option">IBM Sri Lanka</label><div class="check"></div></li>
                 <li><input class="Location_radio" type="radio" id="q-option" name="venue"><label for="q-option">WSO2</label><div class="check"></div></li>
                 <li><input class="Location_radio" type="radio" id="r-option" name="venue"><label for="r-option">SLIIT</label><div class="check"></div></li>
-                <form><button>Add a new location</button></form>
+                <li>
+                <li><input><input type="checkbox" name="toggle" id="toggle" />
+                    <label for="toggle">Close </label>
+                </li>
+                </li>
+
 
 
 
             </ul>
 
+          </div>
         </div>
 
     </div>
     <div class="col-9" style="padding-left: 0px">
         <div id="content_area">
+            <h1>first content</h1>
+            <hr>
+            <h1>second content</h1>
+            <hr>
+            <h1>third content</h1>
+            <hr>
+            <h1>forth content</h1>
+            <hr>
+            <h1>first content</h1>
+            <hr>
+            <h1>second content</h1>
+            <hr>
+            <h1>third content</h1>
+            <hr>
+            <h1>forth content</h1>
+            <hr>
             <h1>first content</h1>
             <hr>
             <h1>second content</h1>
