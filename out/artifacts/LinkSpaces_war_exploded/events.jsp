@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="assets/css/csss/mainnnnn.css">
 <link rel="stylesheet" href="assets/css/csss/mainnnnnn.css">
 <link rel="stylesheet" href="assets/css/csss/hideshow.css">
+<link rel="stylesheet" href="assets/css/csss/commentToggle.css">
 <div class="row">
     <div class="col-3" style="padding-right: 0px">
 
@@ -80,6 +81,20 @@
     <div class="col-9" style="padding-left: 0px">
         <div id="content_area">
             <h1>first content</h1>
+            <div class="ex3">
+                <label for="item-3">View Event</label>
+                <input type="checkbox" name="one" id="item-3" checked="false">
+                <div class="hide3">
+                    <div class="inner3">
+                        <p>Equation billions upon billions! Courage of our questions decipherment, take root and flourish, cosmic ocean paroxysm of global death. Light years inconspicuous motes of rock and gas from which we spring something incredible is waiting to be known,
+                            muse about!</p>
+                        <p>Equation billions upon billions! Courage of our questions decipherment, take root and flourish, cosmic ocean paroxysm of global death. Light years inconspicuous motes of rock and gas from which we spring something incredible is waiting to be known,
+                            muse about!</p>
+                        <p>Equation billions upon billions! Courage of our questions decipherment, take root and flourish, cosmic ocean paroxysm of global death. Light years inconspicuous motes of rock and gas from which we spring something incredible is waiting to be known,
+                            muse about!</p>
+                    </div>
+                </div>
+            </div>
             <hr>
             <h1>second content</h1>
             <hr>
@@ -98,10 +113,6 @@
             <h1>first content</h1>
             <hr>
             <h1>second content</h1>
-            <hr>
-            <h1>third content</h1>
-            <hr>
-            <h1>forth content</h1>
             <hr>
             <%
                 if(request.getParameter("event")!=null){
@@ -110,6 +121,11 @@
                     <%
                 }
             %>
+            <div class="ex3">
+                <label for="item-3">View Event</label>
+                <input type="checkbox" name="two" id="" checked="false">
+                <div class="hide4">
+                    <div class="inner4">
             <%
                 if(request.getParameter("venue")!=null){
                     %>
@@ -231,6 +247,9 @@
                         <form id="comment"><textarea  rows="5" cols="40"></textarea>
                             <br><br><a class="button" href="#">Post</a>
                         </form>
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div>
             </div>

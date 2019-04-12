@@ -74,15 +74,15 @@ body{background: rgba(200, 240, 255, 0.14);}
 }
 #content_area{
     /*width: 782px;*/
-    height: 750px;
+    height: 730px;
     background-color: snow;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
 }
-.col-9{
+/*.col-9{
     height: 1150px;
-}
+}*/
 #sidebar{
     /*widows: 200px;*/
     background-color: #d6d8ea;
