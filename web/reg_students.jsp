@@ -38,10 +38,7 @@
         
         <p class="inputlabel">Date of birth:</p>
         <input class="inputfield" type="date" name="dob" id="dob" required/>
-        
-        <p class="inputlabel">E-mail:</p>
-        <input class="inputfield" type="email" name="email" id="email" required/>
-        
+
         <p class="inputlabel">University:</p>
         <select name="university" id="university" class="inputselect">
             <option value="none">Select a University</option>
@@ -61,7 +58,10 @@
         <hr/>
         <p class="inputlabel">Username:</p>
         <input class="inputfield" type="text" name="uname" id="uname" required/>
-        
+
+        <p class="inputlabel">E-mail:</p>
+        <input class="inputfield" type="email" name="email" id="email" required/>
+
         <p class="inputlabel">Password:</p>
         <input class="inputfield" type="password" name="pwd" id="pwd" required/>
         

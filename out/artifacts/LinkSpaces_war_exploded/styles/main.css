@@ -3,8 +3,7 @@
 }
 
 body{
-    background: rgba(0, 0, 0, 0.8);
-    background-image: url("images/bg1.jpg");
+    background: #cccccc;
 }
 
 #container{
@@ -22,7 +21,7 @@ body{
     width: auto;
     text-align: center;
     border-radius: 10px;
-    background: rgba(255, 50, 50, 0.4);
+    background: dodgerblue;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -36,9 +35,9 @@ body{
 .btntype1{
     padding: 5px;
     border-radius: 5px;
-    background-color: #333333;
+    background-color: limegreen;
     border: none;
-    color: #cccccc;
+    color: #333333;
     font-weight: bold;
     display: block;
     margin: 0 auto;
@@ -51,9 +50,9 @@ body{
 .btntype2{
     padding: 10px;
     border-radius: 5px;
-    background-color: #333333;
+    background-color: limegreen;
     border: none;
-    color: #cccccc;
+    color: #333333;
     font-weight: bold;
     display: inline-block;
     margin: 0 auto;
@@ -65,17 +64,15 @@ body{
 
 
 .btntype1:hover{
-    background-color: #cccccc;
-    color: #333333;
+    background-color: lime;
 }
 
 .btntype2:hover{
-    background-color: #cccccc;
-    color: #333333;
+    background-color: lime;
 }
 
 .contenthead{
-    color: #cccccc;
+    color: white;
     font-size: 35px;
     font-weight: bold;
     margin-top: 15px;
@@ -84,7 +81,7 @@ body{
 .inputlabel{
     text-align: left;
     margin: 0;
-    color: #cccccc;
+    color: white;
 }
 
 .inputselect{
@@ -104,7 +101,9 @@ body{
     width: 100%;
     border-radius: 3px;
 }
-
+ hr{
+     color: white;
+ }
 
 table{
     width: 100%;

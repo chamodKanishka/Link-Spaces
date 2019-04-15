@@ -28,10 +28,10 @@ public class UniversityController {
 
         try{
 
-            id = user.insert(uname, pwd, type);
+            id = user.insert(uname, pwd, type, email);
             Connection con = db.connect(conn);
 
-            String query = "insert into university values("+id+",'"+name+"','"+regno+"','"+weburl+"','"+email+"')";
+            String query = "insert into university values("+id+",'"+name+"','"+regno+"','"+weburl+"')";
             PreparedStatement st = con.prepareStatement(query);
             st.execute();
 

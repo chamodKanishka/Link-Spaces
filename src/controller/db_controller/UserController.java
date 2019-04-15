@@ -1,14 +1,18 @@
 package controller.db_controller;
 
 import db.Dbcon;
+import security.Encrypt;
 
 import java.sql.*;
 
 public class UserController {
-    public int insert(String uname,String pwd,String type){
+    public int insert(String uname,String pwd,String type,String email){
+
+        Encrypt enc = new Encrypt();
         int id = -1;
-        String query = "insert into users(username,password,user_type) values('"+uname+"','"+pwd+"','"+type+"')";
-        String query1 = "select uid from users where username = '"+uname+"' and password = '"+pwd+"'";
+        String pwdEnc = enc.getHash(pwd);
+        String query = "insert into users(username,password,user_type,email) values('"+uname+"','"+pwdEnc+"','"+type+"','"+email+"')";
+        String query1 = "select uid from users where username = '"+uname+"' and password = '"+pwdEnc+"'";
         String conn = "jdbc:mysql://localhost:3306/linkspaces";
         Dbcon db = new Dbcon();
 

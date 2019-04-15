@@ -27,9 +27,10 @@ public class StudentController {
         int id = -1;
 
         try{
-            id = user.insert(uname, pwd, type);
+            id = user.insert(uname, pwd, type, email);
             Connection con = db.connect(conn);
-            String query = "insert into students values("+id+",'"+fname+"','"+lname+"','"+email+"','"+dob+"','"+uni+"','"+index+"')";
+
+            String query = "insert into students values("+id+",'"+fname+"','"+lname+"','"+dob+"','"+uni+"','"+index+"')";
             PreparedStatement st = con.prepareStatement(query);
             st.execute();
 

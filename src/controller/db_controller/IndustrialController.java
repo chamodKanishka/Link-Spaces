@@ -25,9 +25,10 @@ public class IndustrialController {
 
 
         try{
-            id = user.insert(uname, pwd, type);
+            id = user.insert(uname, pwd, type, email);
             Connection con = db.connect(conn);
-            String query = "insert into industrial values("+id+",'"+name+"','"+orgtype+"','"+weburl+"','"+email+"')";
+
+            String query = "insert into industrial values("+id+",'"+name+"','"+orgtype+"','"+weburl+"')";
             PreparedStatement st = con.prepareStatement(query);
             st.execute();
             con.close();

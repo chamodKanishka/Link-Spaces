@@ -3,7 +3,6 @@ function validateIndustrial(){
     var org = document.forms["regform"]["org"].value;
     var orgtype = document.forms["regform"]["orgtype"].value;
     var weburl = document.forms["regform"]["weburl"].value;
-    var email = document.forms["regform"]["email"].value;
     var uname  = document.forms["regform"]["uname"].value;
     var pwd = document.forms["regform"]["pwd"].value;
     var rptpwd = document.forms["regform"]["rptpwd"].value;
@@ -36,7 +35,7 @@ function validateIndustrial(){
     }
 
     if(!(pwd == rptpwd)){
-        alert("Your Passwords do not match!"+pwd+"  "+rptpwd);
+        alert("Your Passwords do not match!");
         return false;
     }
 }
@@ -47,7 +46,6 @@ function validateUniversity(){
     var uni = document.forms["regform"]["uni"].value;
     var regno = document.forms["regform"]["regno"].value;
     var weburl = document.forms["regform"]["weburl"].value;
-    var email = document.forms["regform"]["email"].value;
     var uname  = document.forms["regform"]["uname"].value;
     var pwd = document.forms["regform"]["pwd"].value;
     var rptpwd = document.forms["regform"]["rptpwd"].value;
@@ -80,7 +78,7 @@ function validateUniversity(){
     }
 
     if(!(pwd == rptpwd)){
-        alert("Your Passwords do not match!"+pwd+"  "+rptpwd);
+        alert("Your Passwords do not match!");
         return false;
     }
 }
@@ -89,7 +87,6 @@ function validateStudent() {
 
     var fname  = document.forms["regform"]["fname"].value;
     var lname  = document.forms["regform"]["lname"].value;
-    var email = document.forms["regform"]["email"].value;
     var uni = document.forms["regform"]["university"].value;
     var index  = document.forms["regform"]["index"].value;
     var uname  = document.forms["regform"]["uname"].value;
@@ -129,7 +126,7 @@ function validateStudent() {
     }
 
     if(!(pwd == rptpwd)){
-        alert("Your Passwords do not match!"+pwd+"  "+rptpwd);
+        alert("Your Passwords do not match!");
         return false;
     }
 }
