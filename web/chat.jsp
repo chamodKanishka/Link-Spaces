@@ -1,5 +1,5 @@
 
-<div id="live-chat">
+<div id="live-chat" style="display: none">
     <header class="clearfix">
         <a class="chat-close">X</a>
 
@@ -10,7 +10,7 @@
     <div class="chat">
         <div class="chat-history">
             <div class="chat-message clearfix">
-                <img src="pictures/sasith.jpg" style="width: 50px; height: 50px;">
+                <img src="assets/pictures/sasith.jpg" style="width: 50px; height: 50px;">
                 <div class="chat-message-content clearfix">
                     <span class="chat-time">14.32</span>
                     <h5>Sasith Manthila</h5>
@@ -21,7 +21,7 @@
             </div>
             <hr>
             <div class="chat-message clearfix">
-                <img src="pictures/lasith.jpg" style="width: 50px; height: 50px;">
+                <img src="assets/pictures/lasith.jpg" style="width: 50px; height: 50px;">
                 <div class="chat-message-content clearfix">
                     <span class="chat-time">14.35</span>
                     <h5>Lasitha Wijayakulathilaka</h5>
@@ -33,7 +33,7 @@
             </div>
             <hr>
             <div class="chat-message clearfix">
-                <img src="pictures/sasith.jpg" style="width: 50px; height: 50px;">
+                <img src="assets/pictures/sasith.jpg" style="width: 50px; height: 50px;">
                 <div class="chat-message-content clearfix">
                     <span class="chat-time">14.38</span>
                     <h5>Sasith Manthila</h5>

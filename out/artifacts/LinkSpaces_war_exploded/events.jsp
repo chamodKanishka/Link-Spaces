@@ -1,267 +1,119 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Chathuranga
-  Date: 3/30/2019
-  Time: 1:08 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:include page="header.jsp"/>
-<script src="controllers/hello.js"></script>
-<link rel="stylesheet" href="assets/css/csss/hello.css"/>
-<link rel="stylesheet" href="assets/css/csss/mainnn.css">
-<link rel="stylesheet" href="assets/css/csss/mainnnnn.css">
-<link rel="stylesheet" href="assets/css/csss/mainnnnnn.css">
-<link rel="stylesheet" href="assets/css/csss/hideshow.css">
-<link rel="stylesheet" href="assets/css/csss/commentToggle.css">
+<jsp:include page="header_events.jsp"/>
+<%
+    HttpSession sessionLogin = request.getSession(false);
+    String uid = "";
+    String username = "";
+    if (sessionLogin != null) {
+        if (sessionLogin.getAttribute("username") != null) {
+            username = sessionLogin.getAttribute("username").toString();
+        }
+        if (sessionLogin.getAttribute("uid") != null) {
+            uid = sessionLogin.getAttribute("uid").toString();
+        }
+    }
+%>
 <div class="row">
-    <div class="col-3" style="padding-right: 0px">
-
-        <br>
-        <input type="checkbox" name="toggle" id="toggle" />
-        <label for="toggle"></label>
-        <div class="container">
+    <div class="col-3" style="padding-right: 20px">
+        <div class="row" style="padding-top: 10px">
+            <div class="col-sm-12">
+                Search Panel
+            </div>
+        </div>
+        <div class="row" style="padding-top: 10px">
+            <div class="col-sm-12">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row" style="padding-top: 10px">
+            <div class="col-sm-12">
+                <button class="btn btn-warning" style="position: relative;left: 50%;transform: translateX(-50%)">
+                    Search
+                </button>
+            </div>
         </div>
         <div class="message">
-          <div id="sidebar">
-            <div id="form">
-                <div id="wrapperdown">
-                    <button class="search icon-down"><span>Search Panel</span></button>
-                </div>
-                <form action="/result.jsp"><textfield><input type="text" name="keyword"/></textfield>
-                <br>
-                <div class="container blue circleBehind"><a id="searchb">Search</a></div>
-                </form>
-            </div>
-            <hr color="white">
-
-
-
-            <ul id="Cats" class="container" type="none">
-                <b id="side">Date:</b>
-                <b id="side">2019</b>
-                <li><input class="date_radio" type="radio" id="a-option" name="date"><label for="a-option">Feb-March 20</label><div class="check"></div></li>
-                <li><input class="date_radio" type="radio" id="b-option" name="date"><label for="b-option">March-April 20</label><div class="check"></div></li>
-                <li><input class="date_radio" type="radio" id="c-option" name="date"><label for="c-option">April-May 20</label><div class="check"></div></li>
-                <li><input class="date_radio" type="radio" id="d-option" name="date"><label for="d-option">May-June 20</label><div class="check"></div></li>
-                <li><input class="date_radio" type="radio" id="e-option" name="date"><label for="e-option">June-July 20</label><div class="check"></div></li>
-                <li><input class="date_radio" type="radio" id="f-option" name="date"><label for="f-option">July-August 20</label><div class="check"></div></li>
-                <li><input class="date_radio" type="radio" id="g-option" name="date"><label for="g-option">August-September 20</label><div class="check"></div></li>
-                <li><input class="date_radio" type="radio" id="h-option" name="date"><label for="h-option">September-October 20</label><div class="check"></div></li>
-                <li><input class="date_radio" type="radio" id="i-option" name="date"><label for="i-option">October-November 20</label><div class="check"></div></li>
-                <li><input class="date_radio" type="radio" id="j-option" name="date"><label for="j-option">November-December 20</label><div class="check"></div></li>
-                <li><input class="date_radio" type="radio" id="k-option" name="date"><label for="k-option">December-January 20</label><div class="check"></div></li>
-                <hr>
-                <b id="side">2020</b>
-                <li><input class="date_radio" type="radio" id="l-option" name="date"><label for="l-option">January-February 20</label><div class="check"></div></li>
-                <li><input class="date_radio" type="radio" id="m-option" name="date"><label for="m-option">February-March 20</label><div class="check"></div></li>
+            <div id="sidebar">
                 <hr color="white">
-                <b id="side">Location:</b>
-                <br/>
-                <li><input class="Location_radio" type="radio" id="n-option" name="venue"><label for="n-option">NSBM</label><div class="check"></div></li>
-                <li><input class="Location_radio" type="radio" id="o-option" name="venue"><label for="o-option">Microsoft Sri Lanka</label><div class="check"></div></li>
-                <li><input class="Location_radio" type="radio" id="p-option" name="venue"><label for="p-option">IBM Sri Lanka</label><div class="check"></div></li>
-                <li><input class="Location_radio" type="radio" id="q-option" name="venue"><label for="q-option">WSO2</label><div class="check"></div></li>
-                <li><input class="Location_radio" type="radio" id="r-option" name="venue"><label for="r-option">SLIIT</label><div class="check"></div></li>
-                <li>
-                <li><input><input type="checkbox" name="toggle" id="toggle" />
-                    <label for="toggle">Close </label>
-                </li>
-                </li>
-
-
-
-
-            </ul>
-
-          </div>
+                <ul id="Cats" class="container" type="none">
+                    <b>Date:</b>
+                    <b>2019</b>
+                    <li><input class="date_radio" type="radio" name="date" checked value="2019-2-3"><label
+                            style="padding-left: 10px">Feb-March
+                        20</label></li>
+                    <li><input class="date_radio" type="radio" name="date" value="2019-3-4"><label
+                            style="padding-left: 10px">March-April
+                        20</label></li>
+                    <li><input class="date_radio" type="radio" name="date" value="2019-4-5"><label
+                            style="padding-left: 10px">April-May
+                        20</label></li>
+                    <li><input class="date_radio" type="radio" name="date" value="2019-5-6"><label
+                            style="padding-left: 10px">May-June
+                        20</label></li>
+                    <li><input class="date_radio" type="radio" name="date" value="2019-6-7"><label
+                            style="padding-left: 10px">June-July
+                        20</label></li>
+                    <li><input class="date_radio" type="radio" name="date" value="2019-7-8"><label
+                            style="padding-left: 10px">July-August
+                        20</label></li>
+                    <li><input class="date_radio" type="radio" name="date" value="2019-8-9"><label
+                            style="padding-left: 10px">August-September
+                        20</label>
+                    </li>
+                    <li><input class="date_radio" type="radio" name="date" value="2019-9-10"><label
+                            style="padding-left: 10px">September-October
+                        20</label>
+                    </li>
+                    <li><input class="date_radio" type="radio" name="date" value="2019-10-11"><label
+                            style="padding-left: 10px">October-November
+                        20</label>
+                    </li>
+                    <li><input class="date_radio" type="radio" name="date" value="2019-11-12"><label
+                            style="padding-left: 10px">November-December
+                        20</label>
+                    </li>
+                    <li><input class="date_radio" type="radio" name="date" value="2019-12-1"><label
+                            style="padding-left: 10px">December-January
+                        20</label>
+                    </li>
+                    <hr>
+                    <b>2020</b>
+                    <li><input class="date_radio" type="radio" name="date" value="2020-1-2"><label
+                            style="padding-left: 10px">January-February
+                        20</label>
+                    </li>
+                    <li><input class="date_radio" type="radio" name="date" value="2020-2-3"><label
+                            style="padding-left: 10px">February-March
+                        20</label></li>
+                    <hr color="white">
+                    <b>Location:</b>
+                    <br/>
+                    <li><input class="date_radio" type="radio" name="venue"><label
+                            style="padding-left: 10px">NSBM</label>
+                        <div class="check"></div>
+                    </li>
+                    <li><input class="date_radio" type="radio" name="venue"><label style="padding-left: 10px">Microsoft
+                        Sri Lanka</label>
+                    </li>
+                    <li><input class="date_radio" type="radio" name="venue"><label style="padding-left: 10px">IBM Sri
+                        Lanka</label></li>
+                    <li><input class="date_radio" type="radio" name="venue"><label
+                            style="padding-left: 10px">WSO2</label></li>
+                    <li><input class="date_radio" type="radio" name="venue"><label
+                            style="padding-left: 10px">SLIIT</label></li>
+                </ul>
+            </div>
         </div>
 
     </div>
-    <div class="col-9" style="padding-left: 0px">
-        <div id="content_area">
-            <h1>first content</h1>
-            <div class="ex3">
-                <label for="item-3">View Event</label>
-                <input type="checkbox" name="one" id="item-3" checked="false">
-                <div class="hide3">
-                    <div class="inner3">
-                        <p>Equation billions upon billions! Courage of our questions decipherment, take root and flourish, cosmic ocean paroxysm of global death. Light years inconspicuous motes of rock and gas from which we spring something incredible is waiting to be known,
-                            muse about!</p>
-                        <p>Equation billions upon billions! Courage of our questions decipherment, take root and flourish, cosmic ocean paroxysm of global death. Light years inconspicuous motes of rock and gas from which we spring something incredible is waiting to be known,
-                            muse about!</p>
-                        <p>Equation billions upon billions! Courage of our questions decipherment, take root and flourish, cosmic ocean paroxysm of global death. Light years inconspicuous motes of rock and gas from which we spring something incredible is waiting to be known,
-                            muse about!</p>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <h1>second content</h1>
-            <hr>
-            <h1>third content</h1>
-            <hr>
-            <h1>forth content</h1>
-            <hr>
-            <h1>first content</h1>
-            <hr>
-            <h1>second content</h1>
-            <hr>
-            <h1>third content</h1>
-            <hr>
-            <h1>forth content</h1>
-            <hr>
-            <h1>first content</h1>
-            <hr>
-            <h1>second content</h1>
-            <hr>
-            <%
-                if(request.getParameter("event")!=null){
-                    %>
-                        <h3 align="center"><%=request.getParameter("event")%></h3>
-                    <%
-                }
-            %>
-            <%
-                if(request.getParameter("venue")!=null){
-                    %>
-                        <h7>Venue:<%= request.getParameter("venue")%></h7>
-                    <%
-                }
-            %>
-            <%
-                if(request.getParameter("venue")!=null){
-            %>
-            <h7>Location:<%= request.getParameter("location")%></h7>
-            <%
-                }
-            %>
-            <%
-                if(request.getParameter("venue")!=null){
-            %>
-            <h7>Website:<%= request.getParameter("website")%></h7>
-            <%
-                }
-            %><%
-            if(request.getParameter("venue")!=null){
-        %>
-            <h7>This is a virtual event:<%= request.getParameter("virtual")%></h7>
-            <%
-                }
-            %>
-                <%
-                    if(request.getParameter("abc") != null) {
-                        if(request.getParameter("abc").equals("attend")) {
-                            out.println("You are Attending");
-                        }
-                        if(request.getParameter("abc").equals("inter")) {
-                            out.println("You are Interested");
-                        }
-                        if(request.getParameter("abc").equals("not")) {
-                            out.println("You are not Attending");
-                        }
-                    }
-                %>
-            </h7>
-            <table>
-                <tr>
-                    <td>
-                        <%
-                            if(request.getParameter("venue")!=null){
-                        %>
-                        <h7>Start Date:<%= request.getParameter("startDate")%></h7>
-                        <%
-                            }
-                        %>
-                    </td>
-                    <td>
-                        <%
-                            if(request.getParameter("venue")!=null){
-                        %>
-                        <h7>Start Time:<%= request.getParameter("startTime")%></h7>
-                        <%
-                            }
-                        %>
-
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <%
-                            if(request.getParameter("venue")!=null){
-                        %>
-                        <h7>End Time:<%= request.getParameter("endTime")%></h7>
-                        <%
-                            }
-                        %>
-
-                    </td>
-                    <td>
-                        <%
-                            if(request.getParameter("venue")!=null){
-                        %>
-                        <h7>End Date:<%= request.getParameter("endDate")%></h7>
-                        <%
-                            }
-                        %>
-
-                    </td>
-                </tr>
-            </table>
-
-            <%
-                if(request.getParameter("venue")!=null){
-            %>
-            <p align="center"><%=request.getParameter("discription")%></p>
-            <%
-                }
-            %>
-            <%
-                if(request.getParameter("venue")!=null){
-            %>
-            <hr>
-            <%
-                }
-            %>
-            <table>
-                <tr><br>
-                    <br>
-
-                    <td>
-                           <a class="button" href="#popup1">Comment</a>
-                        </td>
-                        <td><a class="button" href="comments.jsp">View Comments</a></td>
-                    <td><a class="button" href="comments.jsp">Edit Event</a></td>
-                </tr>
-            </table>
-            <div id="popup1" class="overlay">
-                <div class="popup">
-                    <h2>Type Your Comment Here</h2>
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <form id="comment"><textarea  rows="5" cols="40"></textarea>
-                            <br><br><a class="button" href="#">Post</a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- Trigger/Open The Modal -->
-            <!--<h3 align="center"><%= request.getParameter("event")%></h3>
-            <h3 align="center"><%= request.getParameter("event")%></h3>-->
-
-
-        </div>
-    </div>
+    <input type="hidden" id="uidLinkSpaces" value="<%= uid%>">
+    <input type="hidden" id="usernameLinkSpaces" value="<%= username%>">
+    <div class="col-9" id="posts" style="padding-left: 20px;font-size: 15px;padding-right: 20px;margin-bottom: 10px"></div>
+    <%--<div id="btnChat" style="position: fixed;right: 0px;background-color: #03a2d4;color: #063866;border-radius: 28px;padding: 12px;margin-top: 10px;margin-right: 10px;cursor: pointer"><i class="fa fa-comment fa-2x"></i></div>--%>
 </div>
-<div id="footer">
-</div>
-<div id="chat">
-<!--<jsp:include page="chat.jsp"/>-->
-</div>
-<script src="controllers/chatController.js"></script>
-
+<jsp:include page="chat.jsp"/>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="controller/eventsController.js"></script>
+<script src="controller/chatController.js"></script>
 </body>
 </html>
