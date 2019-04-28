@@ -1,9 +1,28 @@
+var type = '';
+
 $(window).ready(function () {
+    type = 'event';
     if (window.location.pathname == '/events.jsp') {
         setEventsDataToPostsEvents();
-    } else {
+    } else if (window.location.pathname == '/myevents.jsp') {
         setEventsDataToPostsMyEvents();
+    } else if (window.location.pathname == '/home.jsp') {
+        setEventsDataToPosts();
     }
+})
+
+$('#btnEvents').click(function () {
+    type = 'event';
+    setEventsDataToPosts();
+    $('#btnJobs').css('color', '#b48b07');
+    $(this).css('color', 'black');
+})
+
+$('#btnJobs').click(function () {
+    type = 'job';
+    setJobsDataToPosts();
+    $('#btnEvents').css('color', '#b48b07');
+    $(this).css('color', 'black');
 })
 
 $('.date_radio').click(function () {
@@ -70,7 +89,7 @@ $(document).on('click', '.fa-check', function () {
                 posterId: $('#uidLinkSpaces').val(),
                 eventId: $(this).parent().parent().parent().parent().parent().children('input[type=hidden]').val(),
                 comment: comment,
-                type: 'event'
+                type: type
             },
             success: function () {
                 $(that).parent().parent().parent().html(setComments($(that).parent().parent().parent().parent().parent().children('input[type=hidden]').val()))
@@ -90,7 +109,7 @@ $(document).on('click', '.fa-times', function () {
             url: "http://" + window.location.hostname + ":" + window.location.port + "/delete_comment",
             data: {
                 commentId: $(this).parent().parent().children('input[type=hidden]').val(),
-                type: 'event'
+                type: type
             },
             success: function (response) {
                 $(that).parent().parent().remove()
@@ -102,17 +121,11 @@ $(document).on('click', '.fa-times', function () {
     );
 });
 
-function setEventsDataToPostsEvents() {
+function setEventsDataToPosts() {
     $.ajax(
         {
             type: "post",
             url: "http://" + window.location.hostname + ":" + window.location.port + "/load_events",
-            data: {
-                eventYear: $('input[name=date]:checked').val().split('-')[0],
-                eventStartMonth: $('input[name=date]:checked').val().split('-')[1],
-                eventEndMonth: $('input[name=date]:checked').val().split('-')[2],
-                eventDay: 1
-            },
             success: function (response) {
                 var obj = JSON.parse(response);
                 setEventsPosts(obj.Posts);
@@ -124,17 +137,14 @@ function setEventsDataToPostsEvents() {
     );
 }
 
-function setEventsDataToPostsMyEvents() {
+function setJobsDataToPosts() {
     $.ajax(
         {
             type: "post",
-            url: "http://" + window.location.hostname + ":" + window.location.port + "/load_events",
-            data: {
-                uid: $('#uidLinkSpaces').val()
-            },
+            url: "http://" + window.location.hostname + ":" + window.location.port + "/load_jobs",
             success: function (response) {
                 var obj = JSON.parse(response);
-                setEventsPosts(obj.Posts);
+                setJobsPosts(obj.Posts);
             },
             error: function () {
 
@@ -190,6 +200,46 @@ function setEventsPosts(postsData) {
     $('#posts').html(posts)
 }
 
+function setJobsPosts(postsData) {
+    var posts = '<div class="row" style="margin-top: 20px"><div class="col-sm-12" style="text-align: center;font-weight: bold;font-size: 20px"><span style="border: 1px solid #d3a308;padding: 10px;padding-left: 30px;padding-right: 30px;border-radius: 10px">Posts</span></div></div>';
+
+    for (var i = 0; i < postsData.length; i++) {
+        posts += '' +
+            '<div class="row" style="border: 1px solid rgba(249,192,9,0.49);margin-top: 20px;margin-left: 70px;margin-right: 70px;padding-top: 10px">\n' +
+            '           <input type="hidden" value="' + postsData[i].Id + '">' +
+            '           <div class="col-sm-12">\n' +
+            '                <div class="row">\n' +
+            '                    <div class="col-sm-12"><b>Date: </b>' + postsData[i].PostDate + '</div>' +
+            '                    <div class="col-sm-4"><b>Job Title: </b>' + postsData[i].Title + '</div>' +
+            '                    <div class="col-sm-4"><b>Offered By: </b>' + postsData[i].OfferedBy + '</div>' +
+            '                    <div class="col-sm-4"><b>Job Type: </b>' + postsData[i].Type + '</div>' +
+            '                    <div class="col-sm-12" style="margin-top: 10px">' + postsData[i].Description + '</div>\n' +
+            '                </div>\n' +
+            '                <hr>\n' +
+            '                <div class="row" style="padding-bottom: 10px">\n' +
+            '                    <div class="col-sm-12">\n' +
+            '                        <button class="btn btn-outline-warning btnViewComments" style="font-size: 13px;float: right">View Comments</button>\n' +
+            '                    </div>\n' +
+            '                </div>\n' +
+            '            <div class="comments" style="font-size: 14px;display: none;height: 300px;overflow-y: scroll">\n';
+
+        posts += '' +
+            '            </div>\n' +
+            '                <div class="row rowBtnComment" style="display: none">\n' +
+            '                    <hr>\n' +
+            '                    <div class="col-sm-12" style="margin-top: 10px;margin-bottom: 30px">\n' +
+            '                        <button class="btn btnComment"\n' +
+            '                                style="background-color: rgba(249,192,9,0.49);position: relative;left: 50%;transform: translateX(-50%);font-size: 14px">\n' +
+            '                            Comment\n' +
+            '                        </button>\n' +
+            '                    </div>\n' +
+            '                </div>\n' +
+            '            </div>\n' +
+            '        </div>\n'
+    }
+    $('#posts').html(posts)
+}
+
 function setComments(eventId) {
     var comments = '';
     $.ajax(
@@ -199,9 +249,10 @@ function setComments(eventId) {
             url: "http://" + window.location.hostname + ":" + window.location.port + "/load_comments",
             data: {
                 eventId: eventId,
-                type: 'event'
+                type: type
             },
             success: function (response) {
+                console.log(response)
                 var commentsData = JSON.parse(response);
                 for (var j = 0; j < commentsData.Comments.length; j++) {
                     comments += '' +
@@ -229,4 +280,45 @@ function setComments(eventId) {
         }
     );
     return comments;
+}
+
+function setEventsDataToPostsEvents() {
+    $.ajax(
+        {
+            type: "post",
+            url: "http://" + window.location.hostname + ":" + window.location.port + "/load_events",
+            data: {
+                eventYear: $('input[name=date]:checked').val().split('-')[0],
+                eventStartMonth: $('input[name=date]:checked').val().split('-')[1],
+                eventEndMonth: $('input[name=date]:checked').val().split('-')[2],
+                eventDay: 1
+            },
+            success: function (response) {
+                var obj = JSON.parse(response);
+                setEventsPosts(obj.Posts);
+            },
+            error: function () {
+
+            }
+        }
+    );
+}
+
+function setEventsDataToPostsMyEvents() {
+    $.ajax(
+        {
+            type: "post",
+            url: "http://" + window.location.hostname + ":" + window.location.port + "/load_events",
+            data: {
+                uid: $('#uidLinkSpaces').val()
+            },
+            success: function (response) {
+                var obj = JSON.parse(response);
+                setEventsPosts(obj.Posts);
+            },
+            error: function () {
+
+            }
+        }
+    );
 }

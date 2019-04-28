@@ -2,7 +2,13 @@ var type = '';
 
 $(window).ready(function () {
     type = 'event';
-    setEventsDataToPosts();
+    if (window.location.pathname == '/events.jsp') {
+        setEventsDataToPostsEvents();
+    } else if (window.location.pathname == '/myevents.jsp') {
+        setEventsDataToPostsMyEvents();
+    } else if (window.location.pathname == '/home.jsp') {
+        setEventsDataToPosts();
+    }
 })
 
 $('#btnEvents').click(function () {
@@ -17,6 +23,10 @@ $('#btnJobs').click(function () {
     setJobsDataToPosts();
     $('#btnEvents').css('color', '#b48b07');
     $(this).css('color', 'black');
+})
+
+$('.date_radio').click(function () {
+    setEventsDataToPostsEvents();
 })
 
 $(document).on('click', '.btnComment', function () {
@@ -242,6 +252,7 @@ function setComments(eventId) {
                 type: type
             },
             success: function (response) {
+                console.log(response)
                 var commentsData = JSON.parse(response);
                 for (var j = 0; j < commentsData.Comments.length; j++) {
                     comments += '' +
@@ -269,4 +280,45 @@ function setComments(eventId) {
         }
     );
     return comments;
+}
+
+function setEventsDataToPostsEvents() {
+    $.ajax(
+        {
+            type: "post",
+            url: "http://" + window.location.hostname + ":" + window.location.port + "/load_events",
+            data: {
+                eventYear: $('input[name=date]:checked').val().split('-')[0],
+                eventStartMonth: $('input[name=date]:checked').val().split('-')[1],
+                eventEndMonth: $('input[name=date]:checked').val().split('-')[2],
+                eventDay: 1
+            },
+            success: function (response) {
+                var obj = JSON.parse(response);
+                setEventsPosts(obj.Posts);
+            },
+            error: function () {
+
+            }
+        }
+    );
+}
+
+function setEventsDataToPostsMyEvents() {
+    $.ajax(
+        {
+            type: "post",
+            url: "http://" + window.location.hostname + ":" + window.location.port + "/load_events",
+            data: {
+                uid: $('#uidLinkSpaces').val()
+            },
+            success: function (response) {
+                var obj = JSON.parse(response);
+                setEventsPosts(obj.Posts);
+            },
+            error: function () {
+
+            }
+        }
+    );
 }
