@@ -8,29 +8,29 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
-    <script src="scripts/validate.js"></script>
+    <link href="../../assets/css/register.css" rel="stylesheet" type="text/css"/>
+    <script src="../../controller/validate.js"></script>
     <title>Register</title>
 </head>
 <body>
     <div id="container">
-    <div id="contentbox">
-    <p class="contenthead">Register as a University</p>
-    <form id="regform" action="RegisterController" method="POST" onsubmit="return validateUniversity()">
+    <div id="contentbox" class="box">
+    <h1 class="contenthead">Register as an Industrial Entity<h1/>
+    <form id="regform" action="/register" method="POST" onsubmit="return validateIndustrial()">
         
         <hr/>
-        <p class="inputlabel">University Name:</p>
-        <input class="inputfield" type="text" name="uni" id="uni" required/>
+        <p class="inputlabel">Organization Name:</p>
+        <input class="inputfield" type="text" name="org" id="org" required/>
         
-        <p class="inputlabel">University Registration Number:</p>
-        <input class="inputfield" type="text" name="regno" id="regno" required/>
+        <p class="inputlabel">Organization Type:</p>
+        <input class="inputfield" type="text" name="orgtype" id="orgtype" required/>
         
         <p class="inputlabel">Website URL:</p>
         <input class="inputfield" type="text" name="weburl" id="weburl" required/>
 
         <hr/>
         <p class="inputlabel">Username:</p>
-        <input class="inputfield" type="text" name="uname"  id="uname" required/>
+        <input class="inputfield" type="text" name="uname" id="uname" required/>
 
         <p class="inputlabel">E-mail:</p>
         <input class="inputfield" type="email" name="email" id="email" required/>
@@ -41,7 +41,7 @@
         <p class="inputlabel">Repeat Password:</p>
         <input class="inputfield" type="password" name="rptpwd" id="rptpwd" required/>
         
-        <input class="inputfield" type="hidden" name="type" value="university"/>
+        <input class="inputfield" type="hidden" name="type" value="industrial"/>
         <hr/>
         <!--<input class="btntype2" type="reset" value="Reset"/>-->
         <input class="btntype2" type="submit" value="Register"/>

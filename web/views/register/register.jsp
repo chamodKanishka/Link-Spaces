@@ -8,13 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <link href="../../assets/css/reg_select.css" rel="stylesheet" type="text/css"/>
     <title>Title</title>
 </head>
 <body>
   <div id="container">
-    <div id="contentbox">
-        <p class="contenthead">Register</p>
+    <div id="contentbox" class="box">
+        <h1 class="contenthead">Register</h1>
         <button class="btntype1" onclick="window.location='reg_students.jsp'">Register as a Student</button>
         <button class="btntype1" onclick="window.location='reg_uni.jsp'">Register as a University</button>
         <button class="btntype1" onclick="window.location='reg_industrial.jsp'">Register as an Industrial Entity</button>

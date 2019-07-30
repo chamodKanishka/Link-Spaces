@@ -11,8 +11,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
-    <script src="scripts/validate.js"></script>
+    <link href="../../assets/css/register.css" rel="stylesheet" type="text/css"/>
+    <script src="../../controller/validate.js"></script>
     <title>Register</title>
 </head>
 <body>
@@ -25,9 +25,9 @@
     %>
 
     <div id="container">
-    <div id="contentbox">
-    <p class="contenthead">Register as a Student</p>
-    <form id="regform" action="RegisterController" method="POST" onsubmit="return validateStudent()">
+    <div id="contentbox" class="box">
+    <h1 class="contenthead">Register as a Student</h1>
+    <form id="regform" action="/register" method="POST" onsubmit="return validateStudent()">
         
         <hr/>
         <p class="inputlabel">First Name:</p>
